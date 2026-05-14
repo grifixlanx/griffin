@@ -13,11 +13,6 @@ h1 {
 
     text-transform: uppercase;
 }
-.projects h1 {
-    color: #f3089d;
-    text-decoration: none;
-    font-size: 30px;
-}
 h2 {
     color: #34495e;
     text-decoration: none;
@@ -121,4 +116,24 @@ tr:nth-child(even) {
 }
 tr:hover {
     background-color: #ebfcec;
+}
+
+.team_img {
+    overflow: hidden;
+    text-align: center;
+}
+.team_img img {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.team_img img:hover {
+    transform: scale(1.1);
+}
+.team_member {
+    display: inline-block;
+    font-size: small;
+    color: #373737;
+    text-transform: uppercase;
 }

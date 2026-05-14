@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div class="form-card">
+      <h1 class="form-title">Contact Us</h1>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+
+        <div class="form-group">
+          <label class="form-label" for="fullName">Full Name</label>
+          <input class="form-input" type="text" id="fullName" placeholder="Enter full name..." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" placeholder="Enter email address..." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number</label>
+          <input class="form-input" type="tel" id="phone" placeholder="Enter phone number..." />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="subject">Subject Line</label>
+          <input class="form-input" type="text" id="subject" placeholder="Enter subject..." />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-input form-textarea" id="message" placeholder="Enter your message..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input class="form-checkbox" type="checkbox" id="terms" required />
+          <label class="checkbox-label" for="terms">I agree to the terms</label>
+        </div>
+
+        <button class="form-button" type="submit">Send Message</button>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      alert('Message sent! Thank you, ' + name + '.');
+    }
+  </script>
+
+</body>
+</html>
